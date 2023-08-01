@@ -1,0 +1,116 @@
+<%- include('./layout/partials/messages.ejs') %>
+
+   <div class="business-container">
+      <div class="card text-white">
+         <img src="../assets/static/images/contact us-02.jpg" class="business-card-img" alt="..." />
+      </div>
+
+      <div class="business-contact-form">
+         <form action="" method="post">
+            <div class="contact-form-heading">
+               <h2 class="contact-form-h2">
+                  Got any queries or questions? <br />
+                  We’ll be happy to help!
+               </h2>
+            </div>
+
+            <div class="container">
+               <!-- <form action="" method="post"> -->
+               <div class="col-md-12   business-form">
+                  <div class="col-md-6">
+                     <div class="contact-form-row1">
+                        <div class="row">
+                           <div class="contact-form-input">
+                              <input type="text" class="form-control  contact-input" name="name" placeholder="Name*"
+                                 aria-label="Name*" oninput="this.value = this.value.toUpperCase();" required />
+                           </div>
+                           <div class="contact-form-input">
+                              <input type="email" class="form-control contact-input" name="email" placeholder="Email*"
+                                 aria-label="Email" required />
+                           </div>
+                           <div class="contact-form-input">
+                              <input type="number" class="form-control contact-input" placeholder="Mobile*"
+                                 name="mobile" aria-label="Mobile"
+                                 oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                                 maxLength="10" required />
+                           </div>
+                           <div class="contact-form-input">
+                              <select id="inputState" name="purpose" class="form-select contact-select" required>
+                                 <option selected disabled value="">Purpose*</option>
+                                 <option value="1">Feedback/Suggestions</option>
+                                 <option value="2">Trade Enquiry</option>
+                              </select>
+                           </div>
+
+                           <div class="contact-form-input">
+                              <input type="text" class="form-control  contact-input" name="location"
+                                 placeholder="City/Town*" oninput="this.value = this.value.toUpperCase();"
+                                 aria-label="City/Town" required />
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="contact-form-row2">
+                        <div class="row">
+                           <div class="contact-form-input2">
+                              <div class="form-floating">
+                                 <textarea class="form-control  contact-input2" placeholder="Message*" id="message"
+                                    name="message" oninput="this.value = this.value.toUpperCase();" required></textarea>
+                              </div>
+                           </div>
+                           <!-- <div class="contact-form-input2">
+                              <div class="captcha-margin" style="width: 348px; height: 78px; display: block; ">
+                                 <div><iframe title="reCAPTCHA"
+                                       src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LfRnckkAAAAAMCvNHHXAJqSGB0qi3RXF9LAKtYe&amp;co=aHR0cDovLzE0Ni41Ni40OS4yMDo4MA..&amp;hl=en&amp;type=image&amp;v=1h-hbVSJRMOQsmO_2qL9cO0z&amp;theme=light&amp;size=normal&amp;badge=bottomright&amp;cb=3d0zay1krorb"
+                                       width="304" height="78" role="presentation" name="a-m41cxo4xuzn2" frameborder="0"
+                                       scrolling="no"
+                                       sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe>
+                                 </div><textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                                    class="g-recaptcha-response"
+                                    style="width: 250px; height: 35px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+                              </div><iframe style="display: none;"></iframe>
+                           </div> -->
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="contact-form-btn">
+                  <button type="submit" class="text-center contact-btn">Submit</button>
+               </div>
+            </div>
+      </div>
+      </form>
+
+      <div class="contact-body-back">
+         <div class="card text-white">
+
+            <div class="contact-back">
+               <div class="contact-overlay">
+                  <h5 class="contact-img-title wow fadeInLeft" data-wow-delay="0.2s">Contact Us</h5>
+                  <div class="head-office-container">
+                     <h5 class="head-office-heading">Head Office</h5>
+                     <p class="head-office-para">
+                        Dinshaw’s Dairy Foods Pvt. Ltd., Gorewada Road, Borgaon, Gittikhadan, Nagpur – 440013,
+                        Maharashtra,
+                        India
+                     </p>
+                  </div>
+                  <div class="head-office-container">
+                     <h5 class="corporate-heading">Corporate Office</h5>
+                     <p class="head-office-para">
+                        Dinshaw’s GDL Office Banaz, Byramji Town, Nagpur – 440013, Maharashtra, India
+                     </p>
+                     <p class="head-office-para">
+                        Toll-free No.: 1800-120-9999 (All days from 9 am to 6 pm except Sundays & Public Holidays)
+                     </p>
+                     <p class="head-office-para">Email: customerdelight@dinshaws.co.in</p>
+                  </div>
+               </div>
+            </div>
+            <img src="../assets/static/images/contact us-01.jpg" class="contact-card-img" alt="..." />
+            <img src="../assets/static/images/contact-mobileview-02.jpg" class="contact-card-img2" alt="...">
+         </div>
+      </div>
+   </div>

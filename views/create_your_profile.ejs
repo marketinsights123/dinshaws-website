@@ -1,0 +1,464 @@
+<%- include('./layout/partials/messages.ejs') %>
+   <div class="resume-background">
+      <div class="resume-container">
+         <h1 class="resume-form-heading wow fadeInLeft text-center" data-wow-delay="0.2s">
+            Apply For Job
+         </h1>
+         <p class="h-5 text-dark text-center">(Fields marked with Asterisk * are mandatory)</p>
+         <form id="form" method="post">
+            <div class="container" style="width: auto">
+               <!-- personal details  -->
+               <h3 class="resume-heading">Personal Details</h3>
+               <div class="personal-row2"></div>
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="col-md-4 personal-container">
+                        <input type="text" class="form-control" placeholder="First Name*" name="first_name"
+                           oninput="this.value = this.value.toUpperCase();" aria-label="First name" maxlength="30"
+                           required />
+                     </div>
+                     <div class="col-md-4 personal-container">
+                        <input type="text" class="form-control" placeholder="Middle name" name="middle_name"
+                           oninput="this.value = this.value.toUpperCase();" aria-label="Middle name" maxlength="30" />
+                     </div>
+                     <div class="col-md-4 personal-container">
+                        <input type="text" class="form-control" placeholder="Last Name*" name="last_name"
+                           aria-label="Last name" maxlength="30" oninput="this.value = this.value.toUpperCase();"
+                           required />
+                     </div>
+                  </div>
+                  <div class="col-md-12 personal-row2">
+                     <div class="col-md-4">
+                        <div class="input-group">
+                           <span class="input-group-addon" id="sizing-addon2">DOB*</span>
+                           <input type="date" class="form-control" name="dob" id="dob" aria-label="DOB" required />
+                        </div>
+                     </div>
+                     <div class="col-md-4 select-input-resume">
+                        <select id="marital_status" name="marital_status" class="form-select form-input-select"
+                           required>
+                           <option selected disabled>Marital Status*</option>
+                           <option>SINGLE</option>
+                           <option>MARRIED</option>
+                           <option>DIVORCE</option>
+                        </select>
+                     </div>
+                     <div class="col-md-4 select-input-resume">
+                        <select id="gender" name="gender" class="form-select form-input-select" required>
+                           <option selected disabled>Gender*</option>
+                           <option>MALE</option>
+                           <option>FEMALE</option>
+                           <option>OTHER</option>
+                        </select>
+                     </div>
+                  </div>
+                  <div class="col-md-12 personal-row3">
+                     <div class="col-md-4 personal-container">
+                        <input type="email" class="form-control" placeholder="Email*" name="email" aria-label="email"
+                           required />
+                     </div>
+                     <div class="col-md-4 personal-container">
+                        <input type="number" class="form-control" placeholder="Mobile Number*" name="mobile_number"
+                           aria-label="Mobile Number"
+                           oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                           maxLength="10" required />
+                     </div>
+                  </div>
+               </div>
+               <!-- address  -->
+               <!-- local address  -->
+               <h3 class="resume-heading">Address</h3>
+               <div class="row">
+                  <div class="col-md-12 address-container">
+                     <div class="col-md-6">
+                        <div class="form-floating address-input">
+                           <textarea class="form-control" placeholder="Local Address*" name="local_address"
+                              style="height: 100px" oninput="this.value = this.value.toUpperCase();"
+                              required></textarea>
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="form-floating address-input">
+                           <textarea class="form-control" placeholder="Permanent Address" name="permanent_address"
+                              oninput="this.value = this.value.toUpperCase();" style="height: 100px"></textarea>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- educational qualification  -->
+               <h3 class="resume-heading">Educational Detail</h3>
+
+               <div class="row education-container">
+                  <h5 class="education-heading">SSC</h5>
+                  <div class="col-md-12 sub-ed-container">
+                     <div class="col-md-4 education-input">
+                        <input type="text" class="form-control" placeholder="School/University*" name="ssc_school"
+                           oninput="this.value = this.value.toUpperCase();" aria-label="School/University" required />
+                     </div>
+                     <div class="col-md-4 education-input">
+                        <input type="number" class="form-control" placeholder="Passing Year*" name="ssc_pass_year"
+                           aria-label="Passing Year"
+                           oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                           maxLength="4" required />
+                     </div>
+                     <div class="col-md-4 education-input">
+                        <input type="number" class="form-control" placeholder="%/Grade*" name="ssc_grade"
+                           aria-label="%/Grade"
+                           oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                           maxLength="5" required />
+                     </div>
+                  </div>
+                  <h5 class="education-heading">HSC</h5>
+                  <div class="col-md-12 sub-ed-container">
+                     <div class="col-md-4 education-input">
+                        <input type="text" class="form-control" placeholder="School/University" name="hsc_school"
+                           oninput="this.value = this.value.toUpperCase();" aria-label="School/University" />
+                     </div>
+                     <div class="col-md-4 education-input">
+                        <input type="number" class="form-control" placeholder="Passing Year" name="hsc_pass_year"
+                           aria-label="Passing Year"
+                           oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                           maxLength="4" />
+                     </div>
+                     <div class="col-md-4 education-input">
+                        <input type="number" class="form-control" placeholder="%/Grade" name="hsc_grade"
+                           aria-label="%/Grade" name="hsc_pass_year" aria-label="Passing Year"
+                           oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                           maxLength="5" />
+                     </div>
+                  </div>
+                  <h5 class="education-heading">Graduation</h5>
+                  <div class="col-md-12 sub-ed-container">
+                     <div class="col-md-4 education-input">
+                        <input type="text" class="form-control" placeholder="School/University" name="graduate_school"
+                           oninput="this.value = this.value.toUpperCase();" aria-label="School/University" />
+                     </div>
+                     <div class="col-md-4 education-input">
+                        <input type="number" class="form-control" placeholder="Passing Year" name="graduate_pass_year"
+                           aria-label="Passing Year" name="hsc_pass_year" aria-label="Passing Year"
+                           oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                           maxLength="4" />
+                     </div>
+                     <div class="col-md-4 education-input">
+                        <input type="number" class="form-control" placeholder="%/Grade" name="graduate_grade"
+                           aria-label="%/Grade" name="hsc_pass_year" aria-label="Passing Year"
+                           oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                           maxLength="5" />
+                     </div>
+                  </div>
+                  <h5 class="education-heading">Post Graduation</h5>
+                  <div class="col-md-12 sub-ed-container">
+                     <div class="col-md-4 education-input">
+                        <input type="text" class="form-control" placeholder="School/University" name="pgraduate_school"
+                           oninput="this.value = this.value.toUpperCase();" aria-label="School/University" />
+                     </div>
+                     <div class="col-md-4 education-input">
+                        <input type="number" class="form-control" placeholder="Passing Year" name="pgraduate_pass_year"
+                           aria-label="Passing Year" name="hsc_pass_year" aria-label="Passing Year"
+                           oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                           maxLength="4" />
+                     </div>
+                     <div class="col-md-4 education-input">
+                        <input type="number" class="form-control" placeholder="%/Grade" name="pgraduate_grade"
+                           aria-label="%/Grade" name="hsc_pass_year" aria-label="Passing Year"
+                           oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                           maxLength="5" />
+                     </div>
+                  </div>
+               </div>
+
+               <!-- work experience -->
+               <div class="col-md-12 select-btn-main input-top-m">
+                  <div class="col-md-2 experience">
+                     <h5 class="fresher-btn">Experience</h5>
+                  </div>
+                  <div class="col-md-3 btn-group" role="group">
+                     <button id="yes-btn" type="button" class="btn btn-danger">Yes</button>
+                     <button id="no-btn" type="button" class="btn btn-warning">No</button>
+                  </div>
+               </div>
+
+               <!--style="display: none;"  -->
+
+               <div id="experience-details" style="display: none">
+                  <div class="work-container">
+                     <h5 class="resume-heading">Work Experience</h5>
+                     <div class="work-container2">
+                        <div class="row">
+                           <h5 class="work-heading">Current Employer</h5>
+                           <div class="col-md-12">
+                              <div class="col-md-2 work-input-control">
+                                 <input type="text" class="form-control work-input" placeholder="Company Name*"
+                                    name="company_name1" aria-label="Company Name"
+                                    oninput="this.value = this.value.toUpperCase();" required />
+                              </div>
+                              <div class="col-md-2 work-input-control">
+                                 <input type="text" class="form-control work-input" placeholder="Position*"
+                                    oninput="this.value = this.value.toUpperCase();" name="position1"
+                                    aria-label="Position" required />
+                              </div>
+                              <div class="col-md-2 doj-margin">
+                                 <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">DOJ*</span>
+                                    <input type="date" class="form-control" name="doj1" required />
+                                 </div>
+                              </div>
+                              <div class="col-md-2 dol-margin">
+                                 <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">DOL*</span>
+                                    <input type="date" class="form-control" name="dol1" required />
+                                 </div>
+                              </div>
+                              <div class="col-md-2 work-input-control">
+                                 <input type="text" class="form-control work-input" placeholder="Reason For Job Change*"
+                                    name="reason_fjc1" aria-label="Reason For Job Change"
+                                    oninput="this.value = this.value.toUpperCase();" required />
+                              </div>
+                           </div>
+
+                           <h5 class="work-heading">Previous Employer 1</h5>
+                           <div class="col-md-12">
+                              <div class="col-md-2 work-input-control">
+                                 <input type="text" class="form-control work-input" placeholder="Company Name"
+                                    name="company_name2" aria-label="Company Name"
+                                    oninput="this.value = this.value.toUpperCase();" />
+                              </div>
+                              <div class="col-md-2 work-input-control">
+                                 <input type="text" class="form-control work-input" placeholder="Position"
+                                    name="position2" aria-label="Position"
+                                    oninput="this.value = this.value.toUpperCase();" />
+                              </div>
+                              <div class="col-md-2 doj-margin">
+                                 <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">DOJ</span>
+                                    <input type="date" class="form-control" name="doj2" />
+                                 </div>
+                              </div>
+                              <div class="col-md-2 dol-margin">
+                                 <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">DOL</span>
+                                    <input type="date" class="form-control" name="dol2" />
+                                 </div>
+                              </div>
+                              <div class="col-md-2 work-input-control">
+                                 <input type="text" class="form-control work-input" placeholder="Reason For Job Change"
+                                    name="reason_fjc2" oninput="this.value = this.value.toUpperCase();"
+                                    aria-label="Reason For Job Change" />
+                              </div>
+                           </div>
+                           <h5 class="work-heading">Previous Employer 2</h5>
+                           <div class="col-md-12">
+                              <div class="col-md-2 work-input-control">
+                                 <input type="text" class="form-control work-input" placeholder="Company Name"
+                                    name="company_name3" aria-label="Company Name"
+                                    oninput="this.value = this.value.toUpperCase();" />
+                              </div>
+                              <div class="col-md-2 work-input-control">
+                                 <input type="text" class="form-control work-input" placeholder="Position"
+                                    name="position3" aria-label="Position" />
+                              </div>
+                              <div class="col-md-2 doj-margin">
+                                 <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">DOJ</span>
+                                    <input type="date" class="form-control" name="doj3" />
+                                 </div>
+                              </div>
+                              <div class="col-md-2 dol-margin">
+                                 <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">DOL</span>
+                                    <input type="date" class="form-control" name="dol3" />
+                                 </div>
+                              </div>
+                              <div class="col-md-2 work-input-control">
+                                 <input type="text" class="form-control work-input"
+                                    oninput="this.value = this.value.toUpperCase();" placeholder="Reason For Job Change"
+                                    name="reason_fjc3" aria-label="Reason For Job Change" />
+                              </div>
+                           </div>
+                           <h5 class="work-heading">Previous Employer 3</h5>
+                           <div class="col-md-12">
+                              <div class="col-md-2 work-input-control">
+                                 <input type="text" class="form-control work-input"
+                                    oninput="this.value = this.value.toUpperCase();" placeholder="Company Name"
+                                    name="company_name4" aria-label="Company Name" />
+                              </div>
+                              <div class="col-md-2 work-input-control">
+                                 <input type="text" class="form-control work-input"
+                                    oninput="this.value = this.value.toUpperCase();" placeholder="Position"
+                                    name="position4" aria-label="Position" />
+                              </div>
+                              <div class="col-md-2 doj-margin">
+                                 <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">DOJ</span>
+                                    <input type="date" class="form-control" name="doj4" />
+                                 </div>
+                              </div>
+                              <div class="col-md-2 dol-margin">
+                                 <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">DOL</span>
+                                    <input type="date" class="form-control" name="dol4" />
+                                 </div>
+                              </div>
+                              <div class="col-md-2 work-input-control">
+                                 <input type="text" class="form-control work-input"
+                                    oninput="this.value = this.value.toUpperCase();" placeholder="Reason For Job Change"
+                                    name="reason_fjc4" aria-label="Reason For Job Change" />
+                              </div>
+                           </div>
+                           <h5 class="work-heading">Previous Employer 4</h5>
+                           <div class="col-md-12">
+                              <div class="col-md-2 work-input-control">
+                                 <input type="text" class="form-control work-input"
+                                    oninput="this.value = this.value.toUpperCase();" placeholder="Company Name"
+                                    name="company_name5" aria-label="Company Name" />
+                              </div>
+                              <div class="col-md-2 work-input-control">
+                                 <input type="text" class="form-control work-input"
+                                    oninput="this.value = this.value.toUpperCase();" placeholder="Position"
+                                    name="position5" aria-label="Position" />
+                              </div>
+                              <div class="col-md-2 doj-margin">
+                                 <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">DOJ</span>
+                                    <input type="date" class="form-control" name="doj5" />
+                                 </div>
+                              </div>
+                              <div class="col-md-2 dol-margin">
+                                 <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">DOL</span>
+                                    <input type="date" class="form-control" name="dol5" />
+                                 </div>
+                              </div>
+                              <div class="col-md-2 work-input-control">
+                                 <input type="text" class="form-control work-input"
+                                    oninput="this.value = this.value.toUpperCase();" placeholder="Reason For Job Change"
+                                    name="reason_fjc5" aria-label="Reason For Job Change" />
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <h5 class="resume-heading">References</h5>
+               <div class="reference-container">
+                  <div class="row">
+                     <h5 class="refer-heading">Reference 1</h5>
+                     <div class="col-md-12">
+                        <div class="col-md-3 reference-input">
+                           <input type="text" class="form-control" oninput="this.value = this.value.toUpperCase();"
+                              placeholder="Name Of Person" name="person_name1" aria-label="Name Of Person" />
+                        </div>
+                        <div class="col-md-3 reference-input">
+                           <input type="number" class="form-control" placeholder="Contact Number" name="contact_number1"
+                              aria-label="Contact Number" name="hsc_pass_year" aria-label="Passing Year"
+                              oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                              maxLength="10" />
+                        </div>
+                        <div class="col-md-3 reference-input">
+                           <input type="email" class="form-control" placeholder="Email" name="email1"
+                              aria-label="Email" />
+                        </div>
+                        <div class="col-md-3 reference-input">
+                           <input type="text" class="form-control" oninput="this.value = this.value.toUpperCase();"
+                              placeholder="Remarks" name="remarks1" aria-label="Remarks" />
+                        </div>
+                     </div>
+                     <h5 class="refer-heading">Reference 2</h5>
+                     <div class="col-md-12">
+                        <div class="col-md-3 reference-input">
+                           <input type="text" class="form-control" placeholder="Name Of Person"
+                              oninput="this.value = this.value.toUpperCase();" name="person_name2"
+                              aria-label="Name Of Person" />
+                        </div>
+                        <div class="col-md-3 reference-input">
+                           <input type="number" class="form-control" placeholder="Contact Number" name="contact_number2"
+                              aria-label="Contact Number" name="hsc_pass_year" aria-label="Passing Year"
+                              oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                              maxLength="10" />
+                        </div>
+                        <div class="col-md-3 reference-input">
+                           <input type="email" class="form-control" placeholder="Email" name="email2"
+                              aria-label="Email" />
+                        </div>
+                        <div class="col-md-3 reference-input">
+                           <input type="text" class="form-control" placeholder="Remarks"
+                              oninput="this.value = this.value.toUpperCase();" name="remarks2" aria-label="Remarks" />
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="btn-container">
+               <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+         </form>
+      </div>
+   </div>
+
+   <script>
+      const yesBtn = document.getElementById('yes-btn');
+      const noBtn = document.getElementById('no-btn');
+      const formContainer = document.getElementById('experience-details');
+      const form = document.getElementById('form'); // Replace 'your-form-id' with the actual ID of your form
+
+      yesBtn.addEventListener('click', () => {
+         // Show the form
+         formContainer.style.display = 'block';
+
+         // Enable required attribute for inputs
+         const requiredInputs = formContainer.querySelectorAll('input[required]');
+         requiredInputs.forEach((input) => (input.required = true));
+      });
+
+      noBtn.addEventListener('click', () => {
+         // Hide the form
+         formContainer.style.display = 'none';
+
+         // Disable required attribute for inputs
+         const requiredInputs = formContainer.querySelectorAll('input[required]');
+         requiredInputs.forEach((input) => (input.required = false));
+      });
+
+      form.addEventListener('submit', (e) => {
+         if (formContainer.style.display === 'none') {
+            // Skip form validation if the form is hidden
+            return;
+         }
+
+         // Perform form validation or submission logic here
+         // ...
+      });
+   </script>
+
+   <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function () {
+         'use strict';
+
+         // Fetch all the forms we want to apply custom Bootstrap validation styles to
+         var forms = document.querySelectorAll('.needs-validation');
+
+         // Loop over them and prevent submission
+         Array.prototype.slice.call(forms).forEach(function (form) {
+            form.addEventListener(
+               'submit',
+               function (event) {
+                  if (!form.checkValidity()) {
+                     event.preventDefault();
+                     event.stopPropagation();
+                  }
+
+                  form.classList.add('was-validated');
+               },
+               false
+            );
+         });
+      })();
+   </script>
+   <script>
+      var input = document.getElementById('dob');
+      var currentDate = new Date();
+      var minDate = new Date(currentDate.getFullYear() - 18, currentDate.getMonth(), currentDate.getDate());
+      input.setAttribute('max', minDate.toISOString().split('T')[0]);
+   </script>

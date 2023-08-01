@@ -1,0 +1,31 @@
+<%- include('./layout/partials/messages.ejs') %>
+   <div class="career-container">
+      <div class="card text-white">
+         <img src="../assets/static/images/career-02.jpg" class="career-card-img" alt="..." />
+         <img src="../assets/static/images/career-02-sm.jpg" class="career-card-img1" alt="..." />
+      </div>
+      <!-- career select start -->
+      <div class="career-form-card text-center">
+         <h1 class="career-form-heading">Apply Now</h1>
+
+         <div class="apply-btn-container">
+            <!-- <a href="" class=" btn btn-primary">Apply Here</a> -->
+            <button class="apply-btn wow fadeInDown" style="width: auto">
+               <a href="/career/create-profile" class="active contact-btn">Click here to Apply </a>
+            </button>
+         </div>
+      </div>
+   </div>
+   <script>
+      const yesBtn = document.getElementById('yes-btn');
+      const noBtn = document.getElementById('no-btn');
+      const noContainer = document.getElementById('no-container');
+
+      yesBtn.addEventListener('click', () => {
+         noContainer.style.display = 'none';
+      });
+
+      noBtn.addEventListener('click', () => {
+         noContainer.style.display = 'block';
+      });
+   </script>
